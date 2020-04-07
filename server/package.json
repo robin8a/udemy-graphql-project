@@ -1,0 +1,22 @@
+{
+  "name": "udemy-graphql-project",
+  "version": "1.0.0",
+  "description": "Udemy GraphQL project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robin8a/udemy-graphql-project.git"
+  },
+  "author": "Robin Ochoa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robin8a/udemy-graphql-project/issues"
+  },
+  "homepage": "https://github.com/robin8a/udemy-graphql-project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
