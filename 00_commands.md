@@ -23,12 +23,11 @@ source ~/.bash_profile
 ```
 
 
-# Testing
+
+
+# Load Dash
+
 ```sh
-nodemon app
-
-# 
-http://localhost:4000/graphql
-
-
+npm install lodash --save
 ```
+

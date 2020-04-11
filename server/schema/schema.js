@@ -1,12 +1,13 @@
 const graphql = require('graphql');
+var _ = require('lodash');
 
 // dummy data
-var userData = [
+var usersData = [
     {id: '1', name: 'Bod', age: 36},
     {id: '13', name: 'Anna', age: 26},
     {id: '211', name: 'Bella', age: 16},
     {id: '19', name: 'Gina', age: 26},
-    {id: '150', name: 'Georgina', age: 36},
+    {id: '150', name: 'Georgina', age: 36}
 ];
 
 const {
@@ -39,13 +40,7 @@ const RootQuery = new GraphQLObjectType({
             type: UserType,
             args: {id: {type: GraphQLString}},
             resolve(parent, args){
-                let user = {
-                    id: '345',
-                    age: 34,
-                    name: 'Paulo'
-                }
-
-                return user;
+                return _.find(usersData, {id: args.id})
                 // we resolve with data
                 // get and return data from a datasource
             }
