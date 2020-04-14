@@ -1,5 +1,6 @@
 # Testing
 ```sh
+source ~/.bash_profile
 nodemon app
 
 # Browser
