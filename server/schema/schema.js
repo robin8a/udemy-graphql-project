@@ -11,20 +11,19 @@ var usersData = [
 ];
 
 var hobbiesData = [
-    {id: '1', title: 'Programming', description: 'Using computers...'},
-    {id: '2', title: 'Rowing', description: 'Sweart and fell...'},
-    {id: '3', title: 'Swimming', description: 'Get in water...'},
-    {id: '4', title: 'Fencing', description: 'Hobby for fency...'},
-    {id: '5', title: 'Hiking', description: 'Wear hiking boots...'},
+    {id: '1', title: 'Programming', description: 'Using computers...', userId: '150'},
+    {id: '2', title: 'Rowing', description: 'Sweart and fell...', userId: '211'},
+    {id: '3', title: 'Swimming', description: 'Get in water...', userId: '211'},
+    {id: '4', title: 'Fencing', description: 'Hobby for fency...', userId: '13'},
+    {id: '5', title: 'Hiking', description: 'Wear hiking boots...', userId: '150'}
 ];
 
 var postsData = [
-    {id: '1', comment: 'Comment 1...'},
-    {id: '2', comment: 'Comment 2...'},
-    {id: '3', comment: 'Comment 3...'},
-    {id: '4', comment: 'Comment 4...'},
-    {id: '5', comment: 'Comment 5...'},
-    
+    {id: '1', comment: 'Comment 1...', userId: '1'},
+    {id: '2', comment: 'Comment 2...', userId: '1'},
+    {id: '3', comment: 'Comment 3...', userId: '19'},
+    {id: '4', comment: 'Comment 4...', userId: '211'},
+    {id: '5', comment: 'Comment 5...', userId: '1'}
 ];
 
 const {
@@ -54,7 +53,13 @@ const HobbyType = new GraphQLObjectType({
     fields: () => ({
         id: {type: GraphQLID},
         title: {type: GraphQLString},
-        description: {type: GraphQLString}
+        description: {type: GraphQLString},
+        user: {
+            type: UserType,
+            resolve(parent, args){
+                return _.find(usersData, {id: parent.userId})
+            }
+        }
     })
 })
 
@@ -63,7 +68,13 @@ const PostType = new GraphQLObjectType({
     description: 'Documentation for Post',
     fields: () => ({
         id: {type: GraphQLID},
-        comment: {type: GraphQLString}
+        comment: {type: GraphQLString},
+        user: {
+            type: UserType,
+            resolve(parent, args){
+                return _.find(usersData, {id: parent.userId})
+            }
+        }
     })
 })
 
