@@ -11,6 +11,18 @@ http://localhost:4000/graphql
 # Queries
 
 ```js
+
+// # Keyboard shortcuts:
+// #
+// #  Prettify Query:  Shift-Ctrl-P (or press the prettify button above)
+// #
+// #     Merge Query:  Shift-Ctrl-M (or press the merge button above)
+// #
+// #       Run Query:  Ctrl-Enter (or press the play button above)
+// #
+// #   Auto Complete:  Ctrl-Space (or just start typing)
+
+
 {
   user (id: "1") {
     age
@@ -41,5 +53,19 @@ http://localhost:4000/graphql
 	}
 }
 
+
+{
+  user(id: "211"){
+    name
+    profession
+		posts {
+      comment
+    }
+    hobbies {
+      title
+      description
+    }
+  }
+}
 
 ```
