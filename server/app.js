@@ -14,7 +14,7 @@ const testSchema = require('./schema/types_schema');
 
 app.use('/graphql', graphqlHTTP({
     graphiql: true,
-    schema: testSchema
+    schema: schema
 }));
 
 app.listen(4000, () => {
