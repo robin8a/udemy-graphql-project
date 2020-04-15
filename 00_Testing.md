@@ -69,3 +69,19 @@ http://localhost:4000/graphql
 }
 
 ```
+
+# Mutations
+```js
+
+
+mutation{
+  createUser(name: "Apollo", age: 23, profession: "Graphyer"){
+    name
+    age
+    profession
+    id
+  }
+}
+
+
+```
