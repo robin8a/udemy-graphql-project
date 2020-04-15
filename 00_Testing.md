@@ -84,4 +84,30 @@ mutation{
 }
 
 
+mutation{
+	createPost(comment: "First post", userId: "13"){
+		comment
+    id
+    user {
+      id
+      name
+    }
+	}
+}
+
+
+
+mutation{
+	createHobby(title: "Title", description: "Desc", userId: "150"){
+    id
+    title
+    description
+    user {
+      name
+    }
+  }
+}
+
+
+
 ```
