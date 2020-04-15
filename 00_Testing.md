@@ -108,6 +108,30 @@ mutation{
   }
 }
 
+```
 
+# List
 
+```js
+{
+  users {
+    id,
+    name,
+    hobbies{
+      title
+    }
+  }
+}
+
+{
+  hobbies {
+    id
+  }
+}
+
+{
+  posts {
+    id
+  }
+}
 ```
