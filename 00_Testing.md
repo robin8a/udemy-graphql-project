@@ -135,3 +135,31 @@ mutation{
   }
 }
 ```
+
+# Mongoose 
+
+```sh
+mutation{
+  createUser(name: "Lucas", age: 15, profession: "Actor"){
+    id
+    name
+  } 
+}
+
+mutation{
+  createPost(comment: "New comment", userId: "5e9767247c625e6786fcc22d"){
+    id
+    comment
+  }
+}
+
+
+mutation{
+  createHobby(title: "Hobby title", description: "Hobby desc "){
+		id
+    title    
+    description
+  }
+}
+
+```
