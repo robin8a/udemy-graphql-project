@@ -162,4 +162,67 @@ mutation{
   }
 }
 
+mutation {
+  createHobby(title: "new hobby", description: "new hobby desc", userId: "5e9767247c625e6786fcc22d"){
+    title
+  }
+}
+
+```
+
+
+# Queries with Mongo
+
+```js
+
+{
+  user(id: "5e9767247c625e6786fcc22d"){
+    id
+    name
+    profession
+  }
+}
+
+{
+  users{
+    name
+  }
+}
+
+{
+  users{
+    name
+    hobbies{
+      description
+    }
+  }
+}
+
+{
+  hobbies{
+    description
+  }
+}
+
+{
+  hobby(id: "5e9788403140bf6d46879304"){
+    title
+    description
+    user {
+      name
+      age
+    }
+  }
+}
+
+{
+  post(id: "5e976b34e5d98b68cc10ef7d"){
+    comment
+    id
+    user {
+      name
+    }
+  }
+}
+
 ```
