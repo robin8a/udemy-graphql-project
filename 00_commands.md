@@ -31,3 +31,14 @@ source ~/.bash_profile
 npm install lodash --save
 ```
 
+
+# Mongo Lab
+- [Mongo Lab: Database-as-a-Service for MongoDB](https://mlab.com/)
+
+186.80.192.229
+mongodb+srv://robin8a:<password>@cluster0-4frw6.mongodb.net/test?retryWrites=true&w=majority
+
+# Mongoose
+```sh
+sudo npm install mongoose --save
+```
