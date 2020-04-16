@@ -247,4 +247,11 @@ mutation{
   }
 }
 
+mutation{
+  UpdateHobby(id: "5e976bd3e5d98b68cc10ef7e", title: "Dance", description: "Move your body every day"){
+    title
+    description
+  }
+}
+
 ```
