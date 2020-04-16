@@ -60,4 +60,8 @@ heroku git:remote -a udemy-graphql-project
 
 git push heroku master
 
+
+heroku buildpacks:set https://github.com/heroku/heroku-buildpack-nodejs -a udemy-graphql-project
+
+
 ```
