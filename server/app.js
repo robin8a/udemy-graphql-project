@@ -11,14 +11,14 @@ mongoose.connection.once('open', () => {
 
 const schema = require('./schema/schema');
 const testSchema = require('./schema/types_schema');
-const cors = require('cors');
+// const cors = require('cors');
 
-app.use(cors);
+// app.use(cors);
 app.use('/graphql', graphqlHTTP({
     graphiql: true,
     schema: schema
 }));
 
-app.listen(4000, () => {
-    console.log('Listening for requests on port 4000');
+app.listen(8400, () => {
+    console.log('Listening for requests on port 8400');
 })
