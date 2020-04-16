@@ -11,9 +11,9 @@ mongoose.connection.once('open', () => {
 
 const schema = require('./schema/schema');
 const testSchema = require('./schema/types_schema');
-// const cors = require('cors');
+const cors = require('cors');
 
-// app.use(cors);
+app.use(cors());
 app.use('/graphql', graphqlHTTP({
     graphiql: true,
     schema: schema

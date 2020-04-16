@@ -226,3 +226,15 @@ mutation {
 }
 
 ```
+
+# Update mutation
+
+```js
+mutation{
+  UpdateUser(id: "5e9767808c838267d141a470", name: "Carlota", profession: "Engineer"){
+    name
+    profession
+  }
+}
+
+```
