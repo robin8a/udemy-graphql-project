@@ -1,7 +1,7 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const mongoose = require('mongoose');
-
+const port = process.env.PORT || 8400;
 const app = express();
 
 mongoose.connect('mongodb+srv://robin8a:FLHtfaUTIIYiqCnJ@cluster0-4frw6.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
@@ -19,6 +19,6 @@ app.use('/graphql', graphqlHTTP({
     schema: schema
 }));
 
-app.listen(8400, () => {
-    console.log('Listening for requests on port 8400');
+app.listen(port, () => {
+    console.log('Listening for requests on port: ' + port);
 })
