@@ -42,3 +42,8 @@ mongodb+srv://robin8a:<password>@cluster0-4frw6.mongodb.net/test?retryWrites=tru
 ```sh
 sudo npm install mongoose --save
 ```
+
+# Cors
+```sh
+sudo npm install cors --save
+```
