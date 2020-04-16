@@ -237,4 +237,14 @@ mutation{
   }
 }
 
+mutation{
+  UpdatePost(id: "5e976b34e5d98b68cc10ef7d", comment: "15:15 comment"){
+    comment
+    user{
+      id
+      name
+    }
+  }
+}
+
 ```
