@@ -47,3 +47,17 @@ sudo npm install mongoose --save
 ```sh
 sudo npm install cors --save
 ```
+
+
+
+# Heroku
+
+```sh
+heroku login
+
+# ref: https://dashboard.heroku.com/apps/udemy-graphql-project/deploy/heroku-git
+heroku git:remote -a udemy-graphql-project
+
+git push heroku master
+
+```
