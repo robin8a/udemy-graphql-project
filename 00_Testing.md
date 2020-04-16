@@ -254,4 +254,53 @@ mutation{
   }
 }
 
+mutation{
+  UpdateHobby(id: "5e9788403140bf6d46879304", title: "Golf", description: "A mind game for every hole"){
+    title
+    description
+  }
+}
+
+```
+
+# Mutation Remove
+
+```js
+mutation{
+  CreateUser(name: "Borrame", age: 40, profession: "Borrar"){
+    name
+  }
+}
+
+mutation{
+  RemoveUser(id: "5e98c44d7612a21ac7e447cd"){
+    name
+  }
+}
+
+
+mutation{
+  CreatePost(userId: "5e9767808c838267d141a470", comment: "Borrame plz") {
+    comment
+  }
+}
+
+mutation{
+  RemovePost(id: "5e98c5b845270a1b40b1d91c"){
+    comment
+  }
+}
+
+mutation{
+  CreateHobby(userId: "5e9767808c838267d141a470", title: "Hobby borrame", description: "desc"){
+    description
+  }
+}
+
+mutation{
+  RemoveHobby(id: "5e98c71f2d5abe1b9d611fdf"){
+    title
+  }
+}
+
 ```
