@@ -155,7 +155,7 @@ const RootQuery = new GraphQLObjectType({
 const Mutation = new GraphQLObjectType({
     name: 'Mutation',
     fields: {
-        createUser: {
+        CreateUser: {
             type: UserType,
             args: {
                 name: {type: new GraphQLNonNull(GraphQLString)},
@@ -171,7 +171,29 @@ const Mutation = new GraphQLObjectType({
                 return user.save();
             }
         },
-        createPost: {
+        UpdateUser:{
+          type: UserType,
+          args: {
+                id: {type: new GraphQLNonNull(GraphQLString)},
+                name: {type: new GraphQLNonNull(GraphQLString)},
+                age: {type: GraphQLInt},
+                profession: {type: GraphQLString}
+            },
+            resolve(parent, args){
+                return User.findByIdAndUpdate(
+                    args.id,
+                    {
+                        $set: {
+                            name: args.name,
+                            age: args.age,
+                            profession: args.profession
+                        }
+                    },
+                    {new: true} // send back updated object
+                )
+            }
+        },
+        CreatePost: {
             type: PostType,
             args: {
                 comment: {type: new GraphQLNonNull(GraphQLString)},
@@ -185,7 +207,7 @@ const Mutation = new GraphQLObjectType({
                 return post.save();
             }
         },
-        createHobby: {
+        CreateHobby: {
             type: HobbyType,
             args: {
                 title: {type: new GraphQLNonNull(GraphQLString)},
